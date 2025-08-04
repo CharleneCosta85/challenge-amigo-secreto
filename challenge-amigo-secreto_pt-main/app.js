@@ -1,4 +1,4 @@
-let nomes[];
+let nomes = [];
 
 function adicionarNome(){
     const input = document.getElementById("nomeInput");
@@ -16,7 +16,7 @@ function atualizarLista(){
     const lista = document.getElementById("listaNome");
     lista.innerHTML = "";
     nomes.forEach((nome)=>{
-        const item = document.creatElement("li");
+        const item = document.createElement("li");
         item.textContent = nome;
         lista.appendChild(item);
     });
@@ -27,4 +27,5 @@ function sortearAmigo(){
         return;
     }
     const sorteado = nomes[Math.floor(Math.random()*nomes.length)];
-    document.getElementById("resultado").textContent = 'O amigo secreto é :${sorteado}';//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
+    document.getElementById("resultado").textContent = `O amigo secreto é: ${sorteado}`;
+}
